@@ -49,4 +49,5 @@ gem 'pg'
 
 # Barcode generator
 gem 'barby', '~> 0.6.2'
+gem 'chunky_png', '~> 1.3', '>= 1.3.4'
 

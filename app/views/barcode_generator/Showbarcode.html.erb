@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bar code generator</title>
+     <style>
+         table.barby-barcode { border-spacing: 0; }
+         tr.barby-row {}
+         td.barby-cell { width: 3px; height:30px; }
+         td.barby-cell.on { background: #000; }
+
+    </style>
+</head>
+
+<body>
+
+    </br></br></br>
+    <div align="center">
+    <%= @barcode.to_html.html_safe %>
+    </div>
+</body>
+</html>
