@@ -8,7 +8,7 @@ class BarcodegeneratorController < ApplicationController
 
   def generate
 
-    @barcode = Barby::Code128B.new('Jorge Henrique de Sousa Rocha')
+    @barcode = Barby::Code128B.new('12345')
 
     @outputter = Barby::HtmlOutputter.new(@barcode)
 
