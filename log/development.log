@@ -6640,3 +6640,194 @@ PG::FeatureNotSupported: ERROR:  cached plan must not change result type
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 4], ["user_id", 4], ["created_at", "2015-10-25 18:48:17.438144"], ["updated_at", "2015-10-25 18:48:17.438144"]]
   [1m[35m (6.4ms)[0m  COMMIT
 Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-25 15:54:44 -0300
+Processing by UserController#create as HTML
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "identifier", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "0f2b7b461a1d5a1f5cc586a78692e6cb"], ["identifier", "422c7796bd55e9cee0e75405a673d017"], ["created_at", "2015-10-25 18:54:44.727166"], ["updated_at", "2015-10-25 18:54:44.727166"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "vehicles" ("vehicle_type", "identifier", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vehicle_type", "car"], ["identifier", "260f10aab2831ece24a19483fdff13ca"], ["user_id", 5], ["created_at", "2015-10-25 18:54:44.750649"], ["updated_at", "2015-10-25 18:54:44.750649"]]
+  [1m[35m (6.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/5/ticket/create
+Completed 302 Found in 67ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/5/ticket/create" for ::1 at 2015-10-25 15:54:44 -0300
+Processing by TicketController#create as HTML
+  Parameters: {"vehicle_id"=>"5"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 5], ["user_id", 5], ["created_at", "2015-10-25 18:54:44.801716"], ["updated_at", "2015-10-25 18:54:44.801716"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+Redirected to http://localhost:30004/barcode/create
+Completed 302 Found in 24ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/" for ::1 at 2015-10-25 15:54:46 -0300
+Processing by UserController#create as HTML
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "identifier", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "818ff55d14b2fbdee7355843eac7b1e4"], ["identifier", "f534eb8e34b05bcb1e977e8d937911b6"], ["created_at", "2015-10-25 18:54:46.042331"], ["updated_at", "2015-10-25 18:54:46.042331"]]
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "vehicles" ("vehicle_type", "identifier", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vehicle_type", "car"], ["identifier", "a767c1d0afa9c650d6025968ce495979"], ["user_id", 6], ["created_at", "2015-10-25 18:54:46.051486"], ["updated_at", "2015-10-25 18:54:46.051486"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/6/ticket/create
+Completed 302 Found in 14ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/6/ticket/create" for ::1 at 2015-10-25 15:54:46 -0300
+Processing by TicketController#create as HTML
+  Parameters: {"vehicle_id"=>"6"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 6], ["user_id", 6], ["created_at", "2015-10-25 18:54:46.070906"], ["updated_at", "2015-10-25 18:54:46.070906"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:30005/barcode/create
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-10-25 15:54:46 -0300
+Processing by UserController#create as HTML
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "identifier", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "b722d09db5f319564eeca17141a89f6d"], ["identifier", "1ad9c1a5360d668dce7d79f234f126e2"], ["created_at", "2015-10-25 18:54:46.982923"], ["updated_at", "2015-10-25 18:54:46.982923"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "vehicles" ("vehicle_type", "identifier", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vehicle_type", "car"], ["identifier", "5d244941dc1aab860470943f038d81c6"], ["user_id", 7], ["created_at", "2015-10-25 18:54:46.991977"], ["updated_at", "2015-10-25 18:54:46.991977"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/7/ticket/create
+Completed 302 Found in 20ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/7/ticket/create" for ::1 at 2015-10-25 15:54:47 -0300
+Processing by TicketController#create as HTML
+  Parameters: {"vehicle_id"=>"7"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 7], ["user_id", 7], ["created_at", "2015-10-25 18:54:47.018410"], ["updated_at", "2015-10-25 18:54:47.018410"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+Redirected to http://localhost:30006/barcode/create
+Completed 302 Found in 11ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-25 15:55:04 -0300
+Processing by UserController#create as HTML
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "identifier", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "77f461d54e847eb9d1d7ebd3f99ea23a"], ["identifier", "d686c28a3fbd3331d931023507586a3c"], ["created_at", "2015-10-25 18:55:05.036002"], ["updated_at", "2015-10-25 18:55:05.036002"]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "vehicles" ("vehicle_type", "identifier", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vehicle_type", "car"], ["identifier", "1a3a3ade1c18e81f27fef8e095a6ab28"], ["user_id", 8], ["created_at", "2015-10-25 18:55:05.059810"], ["updated_at", "2015-10-25 18:55:05.059810"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/8/ticket/create
+Completed 302 Found in 37ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/8/ticket/create" for ::1 at 2015-10-25 15:55:05 -0300
+Processing by TicketController#create as HTML
+  Parameters: {"vehicle_id"=>"8"}
+  [1m[36mVehicle Load (2.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (2.3ms)[0m  BEGIN
+  [1m[36mSQL (7.3ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 8], ["user_id", 8], ["created_at", "2015-10-25 18:55:05.103423"], ["updated_at", "2015-10-25 18:55:05.103423"]]
+  [1m[35m (6.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/7/barcode/create
+Completed 302 Found in 38ms (ActiveRecord: 21.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-25 15:55:05 -0300
+Processing by UserController#create as HTML
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "identifier", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "3730a4be8745c6d312b39a21e6efa982"], ["identifier", "fcff30a7cde392239b7078f991dc81d6"], ["created_at", "2015-10-25 18:55:05.126481"], ["updated_at", "2015-10-25 18:55:05.126481"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vehicles" ("vehicle_type", "identifier", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vehicle_type", "car"], ["identifier", "f13f45ab3c50274c479e563c4ce8398b"], ["user_id", 9], ["created_at", "2015-10-25 18:55:05.134937"], ["updated_at", "2015-10-25 18:55:05.134937"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/9/ticket/create
+Completed 302 Found in 12ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/9/ticket/create" for ::1 at 2015-10-25 15:55:05 -0300
+Processing by TicketController#create as HTML
+  Parameters: {"vehicle_id"=>"9"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 9], ["user_id", 9], ["created_at", "2015-10-25 18:55:05.152100"], ["updated_at", "2015-10-25 18:55:05.152100"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/8/barcode/create
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/8/barcode/create" for ::1 at 2015-10-25 15:55:05 -0300
+Processing by BarcodegeneratorController#generate as HTML
+  Parameters: {"ticket_id"=>"8"}
+  Rendered barcode_generator/Showbarcode.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 556ms (Views: 555.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/barcode_generator.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-25 15:55:05 -0300
+
+
+Started GET "/assets/barcodegenerator.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-25 15:55:05 -0300
+
+
+Started GET "/assets/ticket.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-25 15:55:05 -0300
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-25 15:55:05 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-25 15:55:05 -0300
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/assets/barcode_generator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/assets/barcodegenerator.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/assets/ticket.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-25 15:55:06 -0300
+
+
+Started GET "/" for ::1 at 2015-10-25 15:55:31 -0300
+Processing by UserController#create as HTML
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "identifier", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "0f5ed294ebffba033611a592ccf5e1b3"], ["identifier", "7462aa528e34dbdc8c0615c3d63aad78"], ["created_at", "2015-10-25 18:55:31.896697"], ["updated_at", "2015-10-25 18:55:31.896697"]]
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "vehicles" ("vehicle_type", "identifier", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vehicle_type", "car"], ["identifier", "4a99deb1ded78e116ce31bb4f519d2f3"], ["user_id", 10], ["created_at", "2015-10-25 18:55:31.906191"], ["updated_at", "2015-10-25 18:55:31.906191"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/10/ticket/create
+Completed 302 Found in 20ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/10/ticket/create" for ::1 at 2015-10-25 15:55:31 -0300
+Processing by TicketController#create as HTML
+  Parameters: {"vehicle_id"=>"10"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 10], ["user_id", 10], ["created_at", "2015-10-25 18:55:31.932285"], ["updated_at", "2015-10-25 18:55:31.932285"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/9/barcode/create
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/9/barcode/create" for ::1 at 2015-10-25 15:55:31 -0300
+Processing by BarcodegeneratorController#generate as HTML
+  Parameters: {"ticket_id"=>"9"}
+  Rendered barcode_generator/Showbarcode.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.0ms)
