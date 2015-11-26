@@ -51,3 +51,9 @@ gem 'pg'
 gem 'barby', '~> 0.6.2'
 gem 'chunky_png', '~> 1.3', '>= 1.3.4'
 
+
+#API
+gem 'grape'
+gem 'grape-entity', '~> 0.4.8'
+gem 'hashie-forbidden_attributes'
+gem 'rack-cors', :require => 'rack/cors'

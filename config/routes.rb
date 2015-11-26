@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
-
-  #User
-  root 'user#create'
-
-  #Ticket
-  get ':vehicle_id/ticket/create' => 'ticket#create'
-
-  #Barcode
-  get ':ticket_id/barcode/create' => 'barcodegenerator#generate'
-
+  mount API => '/'
+  # root 'barcodegenerator#generate'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
