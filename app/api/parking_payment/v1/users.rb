@@ -12,12 +12,11 @@ class ParkingPayment::V1::Users < Grape::API
     end
     post 'create' do
 
-      error! "User with identifier #{params[:identifier]} has already registered", 500 unless User.find_by_identifier params[:identifier]
+      usr= User.find_by identifier: params[:identifier]
+      error! "User with identifier #{params[:identifier]} has already registered", 500 unless !usr
 
-      user= Users.create params
-
-      user
-
+      usr= User.create params
+      present usr, with: ParkingPayment::V1::Entities::UserEntity
     end
 
   end
