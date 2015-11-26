@@ -7,7 +7,7 @@ module ParkingPayment
       helpers do
       end
 
-      mount User
+      mount Users
 
       route :any, '*path' do
         error!('This is not the endpoint you\'re looking for!', 404)
