@@ -8,6 +8,7 @@ module ParkingPayment
       end
 
       mount Users
+      mount Vehicles
 
       route :any, '*path' do
         error!('This is not the endpoint you\'re looking for!', 404)
