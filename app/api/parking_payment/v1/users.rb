@@ -20,11 +20,9 @@ class ParkingPayment::V1::Users < Grape::API
       error! "User with email #{params[:email]} has already registered", 500 if User.find_by email: params[:email]
 
       user= User.create params
-
       secret_key= generate_token_for_user user
-      result= {user: user, token: secret_key.token}
-      result
-      # present result, with: ParkingPayment::V1::Entities::LoginEntity
+      status 200
+      {user: user, token: secret_key.token}
     end
 
   end

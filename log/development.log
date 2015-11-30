@@ -9469,3 +9469,48 @@ Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-11-29 22:46:23 -0300
 
 Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-11-29 22:46:23 -0300
   [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jhroousa@gmail.com"]]
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-11-29 22:47:48 -0300
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "ddd@gmail.com"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ddd@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("identifier", "name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["identifier", "Jorge Henrique"], ["name", "car"], ["email", "ddd@gmail.com"], ["encrypted_password", "$2a$10$SzoyrUk99.z/RUcAGpPF2.VhOIBtY5/p2mTkq0wJqOsIt.J7W8mIW"], ["created_at", "2015-11-30 01:47:48.874538"], ["updated_at", "2015-11-30 01:47:48.874538"]]
+  [1m[36m (20.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_tokens" ("token", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["token", "kn+qcjXS835wP4w/0M6Mlg=="], ["user_id", 8], ["created_at", "2015-11-30 01:47:48.905903"], ["updated_at", "2015-11-30 01:47:48.905903"]]
+  [1m[35m (12.4ms)[0m  COMMIT
+
+NameError (uninitialized constant ParkingPayment::V1::Entities::UserEntity):
+  app/api/parking_payment/entities/login_entity.rb:6:in `<class:LoginEntity>'
+  app/api/parking_payment/entities/login_entity.rb:4:in `<module:Entities>'
+  app/api/parking_payment/entities/login_entity.rb:3:in `<module:V1>'
+  app/api/parking_payment/entities/login_entity.rb:2:in `<module:ParkingPayment>'
+  app/api/parking_payment/entities/login_entity.rb:1:in `<top (required)>'
+  app/api/parking_payment/v1/users.rb:27:in `block (2 levels) in <class:Users>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.6ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003332478 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x000000033320e0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x0000000332aea8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-11-29 22:47:50 -0300
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "ddd@gmail.com"]]
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-11-29 22:47:56 -0300
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "dddll@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'dddll@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("identifier", "name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["identifier", "Jorge Henrique"], ["name", "car"], ["email", "dddll@gmail.com"], ["encrypted_password", "$2a$10$DydoG9F0V7/7cVkdUJ9TbujItUpQKDA8hLh/YeBmU/JbEctASXE4u"], ["created_at", "2015-11-30 01:47:56.212223"], ["updated_at", "2015-11-30 01:47:56.212223"]]
+  [1m[35m (21.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_tokens" ("token", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["token", "7Fd2Vb6MSEe9/d8Hohdo8g=="], ["user_id", 9], ["created_at", "2015-11-30 01:47:56.236481"], ["updated_at", "2015-11-30 01:47:56.236481"]]
+  [1m[36m (10.4ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-11-29 22:47:58 -0300
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "dddll@gmail.com"]]
