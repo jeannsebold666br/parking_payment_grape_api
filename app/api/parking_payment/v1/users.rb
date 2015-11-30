@@ -47,7 +47,7 @@ class ParkingPayment::V1::Users < Grape::API
     desc 'Logout'
     delete :logout do
 
-      authenticated_user
+      authenticated_user?
       apiKey= UserToken.find_by_token headers['Token']
       apiKey.destroy
 

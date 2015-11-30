@@ -5,7 +5,7 @@ module ParkingPayment
       version 'v1', using: :path
 
       helpers do
-        def authenticated_user
+        def authenticated_user?
           status 401
           error! 'Unauthorized. Invalid or expired token.', 401 unless current_user
         end

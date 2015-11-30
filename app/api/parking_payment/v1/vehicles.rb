@@ -1,6 +1,10 @@
 
 class ParkingPayment::V1::Vehicles < Grape::API
 
+  before do
+    authenticated_user
+  end
+
   helpers do
   end
 
