@@ -25,6 +25,26 @@ class ParkingPayment::V1::Users < Grape::API
       {user: user, token: secret_key.token}
     end
 
+    desc 'Login of user'
+    params  do
+      requires :email, type: String
+      requires :password, type: String
+    end
+    post :signin do
+
+      user = User.find_by_email params[:email]
+
+      error! "Email #{params[:email]} or password is invalid", 500 unless user
+
+      error!  "Email #{params[:email]} or password is invalid", 500 unless user.valid_password? params[:password]
+
+      secret_key= generate_token_for_user user
+
+      {token: secret_key.token}
+
+    end
   end
+
+
 
 end
