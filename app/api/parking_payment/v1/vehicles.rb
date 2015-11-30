@@ -9,7 +9,6 @@ class ParkingPayment::V1::Vehicles < Grape::API
   end
 
   resource :vehicle do
-
     desc 'Create a vehicle'
     params do
       requires :vehicle_type, type: String, allow_blank: false, values: ['motorcycle', 'car','bus']
@@ -28,5 +27,6 @@ class ParkingPayment::V1::Vehicles < Grape::API
       vehicles= Vehicle.where user_id: @current_user.id
       # present vehicles, with: ParkingPayment::V1::Entities::VehicleEntity
     end
+
   end
 end

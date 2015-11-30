@@ -11,26 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151129154638) do
+ActiveRecord::Schema.define(version: 20151130233133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "ticket_paids", force: :cascade do |t|
-    t.integer  "ticket_id"
-    t.float    "price"
-    t.date     "paidDate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "ticket_paids", ["ticket_id"], name: "index_ticket_paids_on_ticket_id", using: :btree
 
   create_table "tickets", force: :cascade do |t|
     t.integer  "vehicle_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "paid"
   end
 
   add_index "tickets", ["user_id"], name: "index_tickets_on_user_id", using: :btree
@@ -80,7 +71,6 @@ ActiveRecord::Schema.define(version: 20151129154638) do
 
   add_index "vehicles", ["user_id"], name: "index_vehicles_on_user_id", using: :btree
 
-  add_foreign_key "ticket_paids", "tickets"
   add_foreign_key "tickets", "users"
   add_foreign_key "vehicles", "users"
 end
