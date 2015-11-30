@@ -43,8 +43,18 @@ class ParkingPayment::V1::Users < Grape::API
       {token: secret_key.token}
 
     end
+
+    desc 'Logout'
+    delete :logout do
+
+      authenticated_user
+      apiKey= UserToken.find_by_token headers['Token']
+      apiKey.destroy
+
+      status 200
+      {response: 'Logout successfully done'}
+
+    end
   end
-
-
 
 end

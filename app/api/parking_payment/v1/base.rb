@@ -5,6 +5,19 @@ module ParkingPayment
       version 'v1', using: :path
 
       helpers do
+        def authenticated_user
+          status 401
+          error! 'Unauthorized. Invalid or expired token.', 401 unless current_user
+        end
+
+        def current_user
+          token = UserToken.find_by_token headers['Token']
+          if token && !token.expired?
+            @current_user = User.find token.user_id
+          else
+            false
+          end
+        end
       end
 
       mount Users
