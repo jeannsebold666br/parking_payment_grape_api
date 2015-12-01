@@ -10437,3 +10437,964 @@ ActionController::RoutingError (No route matches [POST] "/api/v1/ticket/create")
   Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (19.8ms)
 Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000002dd6a88 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000002dd6768 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000002dceef0 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:12:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (68.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+NameError (uninitialized constant ParkingPayment::V1::Ticket::Ticket):
+  app/api/parking_payment/v1/ticket.rb:14:in `block (2 levels) in <class:Ticket>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (21.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.9ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:13:21 -0300
+
+NameError (uninitialized constant ParkingPayment::V1::Base::TicketVehicle):
+  app/api/parking_payment/v1/base.rb:24:in `<class:Base>'
+  app/api/parking_payment/v1/base.rb:3:in `<module:V1>'
+  app/api/parking_payment/v1/base.rb:2:in `<module:ParkingPayment>'
+  app/api/parking_payment/v1/base.rb:1:in `<top (required)>'
+  app/api/parking_payment/api.rb:10:in `<class:API>'
+  app/api/parking_payment/api.rb:2:in `<top (required)>'
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.6ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:13:23 -0300
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/ticket/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (44.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.8ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:13:25 -0300
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/ticket/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.1ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:14:18 -0300
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/ticket/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.2ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:14:30 -0300
+
+NameError (uninitialized constant ParkingPayment::V1::Base::TicketVehicle):
+  app/api/parking_payment/v1/base.rb:24:in `<class:Base>'
+  app/api/parking_payment/v1/base.rb:3:in `<module:V1>'
+  app/api/parking_payment/v1/base.rb:2:in `<module:ParkingPayment>'
+  app/api/parking_payment/v1/base.rb:1:in `<top (required)>'
+  app/api/parking_payment/api.rb:10:in `<class:API>'
+  app/api/parking_payment/api.rb:2:in `<top (required)>'
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:14:33 -0300
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/ticket/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.7ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/create" for 127.0.0.1 at 2015-11-30 22:14:39 -0300
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/ticket/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (20.7ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:14:41 -0300
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/ticket"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/jorgehsrocha/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (18.5ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:15:18 -0300
+  [1m[35mTicket Load (189.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE (10) LIMIT 1
+PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "tickets".* FROM "tickets" WHERE (10) LIMIT 1
+                                                  ^
+: SELECT  "tickets".* FROM "tickets" WHERE (10) LIMIT 1
+
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "tickets".* FROM "tickets" WHERE (10) LIMIT 1
+                                                  ^
+: SELECT  "tickets".* FROM "tickets" WHERE (10) LIMIT 1):
+  app/api/parking_payment/v1/tickets.rb:14:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:15:51 -0300
+  [1m[36mTicket Load (32.1ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 10], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:17:25 -0300
+  [1m[35mTicket Load (0.6ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:17:29 -0300
+  [1m[36mTicket Load (0.6ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 24], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:04 -0300
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 24], ["paid", "f"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (28.8ms)[0m  INSERT INTO "tickets" ("vehicle_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["vehicle_id", 24], ["paid", "t"], ["created_at", "2015-12-01 01:18:05.059649"], ["updated_at", "2015-12-01 01:18:05.059649"]]
+  [1m[36m (17.4ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:10 -0300
+  [1m[35mTicket Load (0.5ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 24], ["paid", "f"]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tickets" ("vehicle_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["vehicle_id", 24], ["paid", "t"], ["created_at", "2015-12-01 01:18:10.097416"], ["updated_at", "2015-12-01 01:18:10.097416"]]
+  [1m[36m (22.9ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:11 -0300
+  [1m[35mTicket Load (0.4ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 24], ["paid", "f"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tickets" ("vehicle_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["vehicle_id", 24], ["paid", "t"], ["created_at", "2015-12-01 01:18:11.181911"], ["updated_at", "2015-12-01 01:18:11.181911"]]
+  [1m[36m (26.1ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:12 -0300
+  [1m[35mTicket Load (0.5ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 24], ["paid", "f"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tickets" ("vehicle_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["vehicle_id", 24], ["paid", "t"], ["created_at", "2015-12-01 01:18:12.074982"], ["updated_at", "2015-12-01 01:18:12.074982"]]
+  [1m[36m (21.9ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:22 -0300
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 24], ["paid", "f"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "tickets" ("vehicle_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["vehicle_id", 24], ["paid", "f"], ["created_at", "2015-12-01 01:18:22.449402"], ["updated_at", "2015-12-01 01:18:22.449402"]]
+  [1m[36m (18.4ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:23 -0300
+  [1m[35mTicket Load (0.6ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 24], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:24 -0300
+  [1m[36mTicket Load (0.6ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 24], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:18:24 -0300
+  [1m[35mTicket Load (0.7ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 24], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:22:57 -0300
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:13:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:22:58 -0300
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:13:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:23:58 -0300
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:13:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:25:30 -0300
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:13:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:30:11 -0300
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:13:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.0ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:31:17 -0300
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:13:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:31:18 -0300
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:13:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:32:24 -0300
+  [1m[36mUserToken Load (42.6ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 24]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:32:30 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.5ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 25], ["paid", "f"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["vehicle_id", 25], ["paid", "f"], ["created_at", "2015-12-01 01:32:30.679134"], ["updated_at", "2015-12-01 01:32:30.679134"]]
+  [1m[35m (28.3ms)[0m  COMMIT
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:33:16 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+NameError (undefined local variable or method `paraefoms' for #<Grape::Endpoint:0x007fee85773d98>):
+  app/api/parking_payment/v1/tickets.rb:19:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.6ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:33:17 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+NameError (undefined local variable or method `paraefoms' for #<Grape::Endpoint:0x007fee84b583d8>):
+  app/api/parking_payment/v1/tickets.rb:19:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:33:59 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:34:01 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:34:02 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:34:03 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:34:03 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (1.0ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:34:04 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:41:06 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:41:08 -0300
+  [1m[35mUserToken Load (2.1ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:41:09 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:41:56 -0300
+  [1m[35mUserToken Load (0.1ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.1ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 25], ["paid", "f"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tickets" ("vehicle_id", "user_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["vehicle_id", 25], ["user_id", 10], ["paid", "f"], ["created_at", "2015-12-01 01:41:56.896262"], ["updated_at", "2015-12-01 01:41:56.896262"]]
+  [1m[35m (30.5ms)[0m  COMMIT
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:42:09 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:42:19 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tickets" ("vehicle_id", "user_id", "paid", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["vehicle_id", 25], ["user_id", 10], ["paid", "f"], ["created_at", "2015-12-01 01:42:19.462786"], ["updated_at", "2015-12-01 01:42:19.462786"]]
+  [1m[36m (24.8ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-11-30 22:42:22 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:48:23 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" IS NULL LIMIT 1
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:48:44 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:48:45 -0300
+  [1m[35mUserToken Load (0.1ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:48:57 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:53:04 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:53:05 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:53:06 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:53:07 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:53:24 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:54:03 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tickets" SET "paid" = $1, "updated_at" = $2 WHERE "tickets"."id" = $3  [["paid", "t"], ["updated_at", "2015-12-01 01:54:03.625703"], ["id", 8]]
+  [1m[36m (13.6ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:54:05 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 22:54:06 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:15:38 -0300
+  [1m[35mUserToken Load (0.1ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:15:39 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.4ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:17:07 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.1ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+
+NameError (undefined local variable or method `vehicle_id' for #<Grape::Endpoint:0x007fee85bed810>):
+  app/api/parking_payment/v1/tickets.rb:42:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.2ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:17:55 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:17:57 -0300
+  [1m[36mUserToken Load (0.5ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:18:08 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `update' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:44:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:18:36 -0300
+
+SyntaxError (/home/jorgehsrocha/Documents/webapps/parking-payment-ruby/app/api/parking_payment/v1/tickets.rb:44: syntax error, unexpected ':', expecting '}'
+      ticket.update {paid: true}
+                          ^):
+  app/api/parking_payment/v1/tickets.rb:44: syntax error, unexpected ':', expecting '}'
+  app/api/parking_payment/v1/base.rb:24:in `<class:Base>'
+  app/api/parking_payment/v1/base.rb:3:in `<module:V1>'
+  app/api/parking_payment/v1/base.rb:2:in `<module:ParkingPayment>'
+  app/api/parking_payment/v1/base.rb:1:in `<top (required)>'
+  app/api/parking_payment/api.rb:10:in `<class:API>'
+  app/api/parking_payment/api.rb:2:in `<top (required)>'
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:19:06 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `update_attribute' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:44:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:19:45 -0300
+
+SyntaxError (/home/jorgehsrocha/Documents/webapps/parking-payment-ruby/app/api/parking_payment/v1/tickets.rb:44: syntax error, unexpected =>, expecting '}'
+      ticket.update_attribute { :paid => true }
+                                        ^):
+  app/api/parking_payment/v1/tickets.rb:44: syntax error, unexpected =>, expecting '}'
+  app/api/parking_payment/v1/base.rb:24:in `<class:Base>'
+  app/api/parking_payment/v1/base.rb:3:in `<module:V1>'
+  app/api/parking_payment/v1/base.rb:2:in `<module:ParkingPayment>'
+  app/api/parking_payment/v1/base.rb:1:in `<top (required)>'
+  app/api/parking_payment/api.rb:10:in `<class:API>'
+  app/api/parking_payment/api.rb:2:in `<top (required)>'
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.0ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:20:10 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `update_attributes' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:44:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.2ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:22:57 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `update_attributes' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:44:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:22:58 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `update_attributes' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:44:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:26:22 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `paid=' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:44:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.2ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:26:23 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `paid=' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:44:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.8ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:04 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `paid=' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:45:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.0ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:05 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `paid=' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:45:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:05 -0300
+  [1m[36mUserToken Load (0.4ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `paid=' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:45:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:06 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `paid=' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:45:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.0ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x00000003cf3598 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003cf32a0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x00000003cf0050 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:18 -0300
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:20 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:20 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
