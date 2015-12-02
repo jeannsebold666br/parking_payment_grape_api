@@ -47,5 +47,10 @@ class ParkingPayment::V1::Tickets < Grape::API
       ticket
     end
 
+    params do
+    end
+    get :all do
+      Ticket.find_by user_id: @current_user.id
+    end
   end
 end
