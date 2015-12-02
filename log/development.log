@@ -11665,3 +11665,36 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started POST "/api/v1/ticket" for 127.0.0.1 at 2015-12-01 22:25:34 -0300
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mUserToken Load (0.1ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.1ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."vehicle_id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:25:44 -0300
+  [1m[36mUserToken Load (0.9ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:25:57 -0300
+  [1m[36mUserToken Load (0.5ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.5ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (2.0ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["id", 8], ["paid", "f"]]
+PG::FeatureNotSupported: ERROR:  cached plan must not change result type
+: SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1
+  [1m[36mTicket Load (0.7ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:26:11 -0300
+  [1m[35mUserToken Load (0.6ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.4ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.5ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "tickets" SET "paid" = $1, "price" = $2, "updated_at" = $3 WHERE "tickets"."id" = $4[0m  [["paid", "t"], ["price", 45.99], ["updated_at", "2015-12-02 01:26:11.190332"], ["id", 8]]
+  [1m[35m (37.9ms)[0m  COMMIT
