@@ -40,10 +40,11 @@ class ParkingPayment::V1::Tickets < Grape::API
     post :pay do
       vehicle= vehicle_exists? params[:vehicle_id]
 
-      ticket= Ticket.find_by id: params[:ticket_id], vehicle_id: params[:vehicle_id], paid: false
-      error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless !ticket
-      ticket.paid= true
-      ticket.update!
+      ticket= Ticket.find_by id: params[:ticket_id], paid: false
+      error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless ticket
+
+      ticket.update paid: true
+      ticket
     end
 
   end
