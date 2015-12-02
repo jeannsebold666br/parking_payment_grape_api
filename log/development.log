@@ -11398,3 +11398,270 @@ Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-11-30 23:28:20 -0300
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
   [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
   [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 21:59:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (71.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUserToken Load (52.7ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (97.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (93.6ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (83.5ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1[0m  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+NoMethodError (undefined method `paid=' for nil:NilClass):
+  app/api/parking_payment/v1/tickets.rb:45:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.2ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x000000037672f0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003766f80 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x0000000375fe88 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 21:59:56 -0300
+  [1m[35mUserToken Load (0.1ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.4ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1[0m  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 21:59:57 -0300
+  [1m[35mUserToken Load (0.4ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.5ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.5ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."vehicle_id" = $2 AND "tickets"."paid" = $3 LIMIT 1[0m  [["id", 8], ["vehicle_id", 25], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:01:24 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.4ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:01:25 -0300
+  [1m[35mUserToken Load (0.7ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.6ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.6ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:01:33 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.5ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:01:34 -0300
+  [1m[35mUserToken Load (0.5ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.6ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.4ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:02:00 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.4ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:02:11 -0300
+  [1m[35mUserToken Load (0.5ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.4ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:02:39 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:02:59 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:03:22 -0300
+  [1m[35mUserToken Load (0.3ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/api/parking_payment/v1/tickets.rb:46:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x000000037672f0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003766f80 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x0000000375fe88 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:03:30 -0300
+  [1m[35mUserToken Load (0.4ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/api/parking_payment/v1/tickets.rb:46:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.9ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x000000037672f0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003766f80 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x0000000375fe88 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:04:03 -0300
+  [1m[35mUserToken Load (0.1ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/api/parking_payment/v1/tickets.rb:46:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.0ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x000000037672f0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003766f80 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x0000000375fe88 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:04:28 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/api/parking_payment/v1/tickets.rb:46:in `block (2 levels) in <class:Tickets>'
+
+
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/jorgehsrocha/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+Cannot render console with content type application/jsonAllowed content types: [#<Mime::Type:0x000000037672f0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x00000003766f80 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x0000000375fe88 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:05:55 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "tickets" SET "paid" = $1, "updated_at" = $2 WHERE "tickets"."id" = $3[0m  [["paid", "t"], ["updated_at", "2015-12-02 01:05:56.078377"], ["id", 8]]
+  [1m[35m (11.2ms)[0m  COMMIT
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:06:05 -0300
+  [1m[36mUserToken Load (0.3ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["id", 8], ["paid", "f"]]
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:10:00 -0300
+  [1m[36mUserToken Load (0.2ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1[0m  [["user_id", 10], ["id", 25]]
+  [1m[35mTicket Load (0.3ms)[0m  SELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1  [["id", 8], ["paid", "f"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "tickets" SET "paid" = $1, "updated_at" = $2 WHERE "tickets"."id" = $3  [["paid", "t"], ["updated_at", "2015-12-02 01:10:00.509825"], ["id", 8]]
+  [1m[36m (39.6ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:10:50 -0300
+  [1m[35mUserToken Load (0.7ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mVehicle Load (0.4ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1 AND "vehicles"."id" = $2 LIMIT 1  [["user_id", 10], ["id", 25]]
+  [1m[36mTicket Load (0.3ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."id" = $1 AND "tickets"."paid" = $2 LIMIT 1[0m  [["id", 8], ["paid", "f"]]
+
+
+Started GET "/api/v1/ticket/all" for 127.0.0.1 at 2015-12-01 22:19:11 -0300
+  [1m[35mUserToken Load (0.2ms)[0m  SELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" IS NULL LIMIT 1
+
+
+Started GET "/api/v1/ticket/all" for 127.0.0.1 at 2015-12-01 22:19:22 -0300
+  [1m[36mUserToken Load (0.4ms)[0m  [1mSELECT  "user_tokens".* FROM "user_tokens" WHERE "user_tokens"."token" = $1 LIMIT 1[0m  [["token", "VM4JYsSTcYpH94UdOrbkng=="]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT  "tickets".* FROM "tickets" WHERE "tickets"."user_id" = $1 LIMIT 1[0m  [["user_id", 10]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnPriceTicket (20151202012213)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (59.8ms)[0m  [1mALTER TABLE "tickets" ADD "price" float[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151202012213"]]
+  [1m[36m (25.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (5.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tickets'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'tokens'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'user_tokens'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'vehicles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
