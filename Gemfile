@@ -59,3 +59,5 @@ gem 'grape-entity', '~> 0.4.8'
 gem 'hashie-forbidden_attributes'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'devise_token_auth'
+
+gem 'dotenv-rails'
