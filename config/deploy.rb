@@ -2,15 +2,14 @@
 # config valid only for Capistrano 3.1
 lock '3.4'
 
-set :application, ""
-set :repo_url, ""
-set :ruby_version, ""
+set :application, "parking-payment-api"
+set :repo_url, "git@github.com:jhrocha/parking-payment-ruby.gits"
+set :ruby_version, "ruby-2.2.1"
 set :deploy_via, :remote_cache
 set :copy_exclude, [ '.git' ]
-set :base_path, ""
-set :ruby_version, ""
+set :base_path, "/var/www/parkingpayment-api"
 set :ruby_gemset, "@global"
-set :user, ""
+set :user, "passenger"
 set :bundle_gemfile, -> { release_path.join('Gemfile') }
 
 # Default branch is :master

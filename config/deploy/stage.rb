@@ -1,5 +1,5 @@
 # server '107.170.178.69', user: 'passenger', roles: %w{web app}
-set :server, ""
+set :server, "107.170.178.69"
 server fetch(:server), user: fetch(:user), roles: %w{web app}, primary: true
 role :app, "#{fetch(:user)}@#{fetch(:server)}"
 role :web, "#{fetch(:user)}@#{fetch(:server)}"

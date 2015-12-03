@@ -39,3 +39,12 @@ production:
   host: <%= ENV['DB_HOST'] %>
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
+
+stage:
+  adapter: postgresql
+  encoding: unicode
+  database: parking_payment_stage
+  pool: 5
+  host: <%= ENV['DB_HOST'] %>
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
