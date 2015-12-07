@@ -3,7 +3,7 @@
 lock '3.4'
 
 set :application, "parking-payment-api"
-set :repo_url, "git@github.com:jhrocha/parking-payment-ruby.gits"
+set :repo_url, "https://github.com/jhrocha/parking-payment-ruby.git"
 set :ruby_version, "ruby-2.2.1"
 set :deploy_via, :remote_cache
 set :copy_exclude, [ '.git' ]

@@ -28,7 +28,7 @@ test:
   database: parking_payment_test
   pool: 5
   host: <%= ENV['DB_HOST'] %>
-  username: <%= ENV['DB_USER'] %>
+  username: <%= ENV['n'] %>
   password: <%= ENV['DB_PASSWORD'] %>
 
 production:

@@ -11698,3 +11698,40 @@ Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-01 22:26:11 -0300
   [1m[35m (0.3ms)[0m  BEGIN
   [1m[36mSQL (0.4ms)[0m  [1mUPDATE "tickets" SET "paid" = $1, "price" = $2, "updated_at" = $3 WHERE "tickets"."id" = $4[0m  [["paid", "t"], ["price", 45.99], ["updated_at", "2015-12-02 01:26:11.190332"], ["id", 8]]
   [1m[35m (37.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mDROP DATABASE IF EXISTS "parking_payment_development"[0m
+  [1m[35m (664.9ms)[0m  CREATE DATABASE "parking_payment_development" ENCODING = 'utf8'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (76.5ms)[0m  CREATE TABLE "tickets" ("id" serial primary key, "vehicle_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "paid" boolean, "price" float) 
+  [1m[36m (72.9ms)[0m  [1mCREATE  INDEX  "index_tickets_on_user_id" ON "tickets" USING btree ("user_id")[0m
+  [1m[35m (73.2ms)[0m  CREATE  INDEX  "index_tickets_on_vehicle_id" ON "tickets" USING btree ("vehicle_id")
+  [1m[36m (130.4ms)[0m  [1mCREATE TABLE "tokens" ("id" serial primary key, "token" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (142.9ms)[0m  CREATE TABLE "user_tokens" ("id" serial primary key, "token" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (123.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "identifier" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet) [0m
+  [1m[35m (73.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (73.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (121.4ms)[0m  CREATE TABLE "vehicles" ("id" serial primary key, "identifier" character varying, "vehicle_type" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (60.7ms)[0m  [1mCREATE  INDEX  "index_vehicles_on_user_id" ON "vehicles" USING btree ("user_id")[0m
+  [1m[35m (9.7ms)[0m  ALTER TABLE "tickets" ADD CONSTRAINT "fk_rails_538a036fb9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (9.9ms)[0m  [1mALTER TABLE "vehicles" ADD CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (68.1ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (61.5ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.9ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (8.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151202012213')[0m
+  [1m[35m (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151025173219')
+  [1m[36m (10.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151025180642')[0m
+  [1m[35m (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151129140001')
+  [1m[36m (10.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151129154638')[0m
+  [1m[35m (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151025174427')
+  [1m[36m (10.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151025173308')[0m
+  [1m[35m (10.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151025180929')
+  [1m[36m (11.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151130233133')[0m
+  [1m[35m (10.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151025184437')
+  [1m[36m (10.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151130232931')[0m
+  [1m[35m (10.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151025174618')
+  [1m[36m (10.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151025173251')[0m
