@@ -8,7 +8,7 @@ class ParkingPayment::V1::Tickets < Grape::API
   helpers do
     def vehicle_exists? vehicle_id
       vehicle= Vehicle.find_by user_id: @current_user.id,id: vehicle_id
-      error! "Vehicle with id #{params[:vehicle_id]} was not found", 500 unless !vehicle
+      error! "Vehicle with id #{params[:vehicle_id]} was not found", 500 unless vehicle
     end
 
     def vehicles_has_pending? vehicle_id
