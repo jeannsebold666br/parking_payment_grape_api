@@ -13,7 +13,7 @@ class ParkingPayment::V1::Tickets < Grape::API
 
     def vehicles_has_pending? vehicle_id
       ticket= Ticket.find_by vehicle_id: vehicle_id, paid: false
-      error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless ticket
+      error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless !ticket
       ticket
     end
 
