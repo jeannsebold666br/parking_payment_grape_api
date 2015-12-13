@@ -8,12 +8,12 @@ class ParkingPayment::V1::Tickets < Grape::API
   helpers do
     def vehicle_exists? vehicle_id
       vehicle= Vehicle.find_by user_id: @current_user.id,id: vehicle_id
-      error! "Vehicle with id #{params[:vehicle_id]} was not found", 500 unless !vehicle
+      error! "Vehicle with id #{params[:vehicle_id]} was not found", 500 unless vehicle
     end
 
     def vehicles_has_pending? vehicle_id
       ticket= Ticket.find_by vehicle_id: vehicle_id, paid: false
-      error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless ticket
+      error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless !ticket
       ticket
     end
 
@@ -40,12 +40,15 @@ class ParkingPayment::V1::Tickets < Grape::API
       requires :ticket_id, type: Integer
       requires :vehicle_id, type: Integer
       requires :price, type: Float
+      requires :pin, type: String
     end
     post :pay do
       vehicle= vehicle_exists? params[:vehicle_id]
 
       ticket= Ticket.find_by id: params[:ticket_id], paid: false
+
       error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless ticket
+      error! "Pin #{params[:pin]} is incorrect", 500 if params[:pin] != @current_user.pin
 
       ticket.update paid: true, price: params[:price]
       ticket
@@ -54,7 +57,7 @@ class ParkingPayment::V1::Tickets < Grape::API
     params do
     end
     get :all do
-      Ticket.find_by user_id: @current_user.id
+      Ticket.where user_id: @current_user.id
     end
   end
 end
