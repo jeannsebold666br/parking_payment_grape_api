@@ -12250,3 +12250,59 @@ Started POST "/api/v1/ticket/pay" for 127.0.0.1 at 2015-12-08 21:48:53 -0300
   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.4ms)[0m  UPDATE "tickets" SET "paid" = $1, "updated_at" = $2 WHERE "tickets"."id" = $3  [["paid", "t"], ["updated_at", "2015-12-09 00:48:53.921593"], ["id", 2]]
   [1m[36m (24.9ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-12-12 21:51:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jhrocha...sousa@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'jhrocha...sousa@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("identifier", "name", "email", "encrypted_password", "pin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["identifier", "Jorge Henrique"], ["name", "car"], ["email", "jhrocha...sousa@gmail.com"], ["encrypted_password", "$2a$10$L/46h5dzzuaKfIlg/rmQKO/spo56d38hUDoct1umoYpKNvCFI3kr."], ["pin", "1234"], ["created_at", "2015-12-13 00:51:12.531626"], ["updated_at", "2015-12-13 00:51:12.531626"]]
+  [1m[35m (10.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_tokens" ("token", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["token", "8YkKOrpqeg/cyKIOD+gN/w=="], ["user_id", 2], ["created_at", "2015-12-13 00:51:12.552561"], ["updated_at", "2015-12-13 00:51:12.552561"]]
+  [1m[36m (12.1ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-12-12 21:51:13 -0300
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jhrocha...sousa@gmail.com"]]
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-12-12 21:51:13 -0300
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jhrocha...sousa@gmail.com"]]
+
+
+Started POST "/api/v1/user/create" for 127.0.0.1 at 2015-12-12 21:59:41 -0300
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "jhrocha...sousa@gmail.com"]]
+  [1m[36m (5013.1ms)[0m  [1mDROP DATABASE IF EXISTS "parking_payment_development"[0m
+PG::ObjectInUse: ERROR:  database "parking_payment_development" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+: DROP DATABASE IF EXISTS "parking_payment_development"
+  [1m[35m (0.4ms)[0m  CREATE DATABASE "parking_payment_development" ENCODING = 'utf8'
+PG::DuplicateDatabase: ERROR:  database "parking_payment_development" already exists
+: CREATE DATABASE "parking_payment_development" ENCODING = 'utf8'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (26.2ms)[0m  DROP TABLE "tickets" CASCADE
+  [1m[36m (211.7ms)[0m  [1mCREATE TABLE "tickets" ("id" serial primary key, "vehicle_id" integer, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "paid" boolean, "price" float) [0m
+  [1m[35m (86.8ms)[0m  CREATE  INDEX  "index_tickets_on_user_id" ON "tickets" USING btree ("user_id")
+  [1m[36m (86.0ms)[0m  [1mCREATE  INDEX  "index_tickets_on_vehicle_id" ON "tickets" USING btree ("vehicle_id")[0m
+  [1m[35m (10.5ms)[0m  DROP TABLE "tokens" CASCADE
+  [1m[36m (111.4ms)[0m  [1mCREATE TABLE "tokens" ("id" serial primary key, "token" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (11.5ms)[0m  DROP TABLE "user_tokens" CASCADE
+  [1m[36m (132.8ms)[0m  [1mCREATE TABLE "user_tokens" ("id" serial primary key, "token" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (10.4ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (132.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "identifier" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "pin" character varying) [0m
+  [1m[35m (84.9ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")
+  [1m[36m (75.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (8.5ms)[0m  DROP TABLE "vehicles" CASCADE
+  [1m[36m (132.9ms)[0m  [1mCREATE TABLE "vehicles" ("id" serial primary key, "identifier" character varying, "vehicle_type" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (73.5ms)[0m  CREATE  INDEX  "index_vehicles_on_user_id" ON "vehicles" USING btree ("user_id")
+  [1m[36m (10.6ms)[0m  [1mALTER TABLE "tickets" ADD CONSTRAINT "fk_rails_538a036fb9"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.7ms)[0m  ALTER TABLE "vehicles" ADD CONSTRAINT "fk_rails_9e34682d54"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
