@@ -40,12 +40,15 @@ class ParkingPayment::V1::Tickets < Grape::API
       requires :ticket_id, type: Integer
       requires :vehicle_id, type: Integer
       requires :price, type: Float
+      requires :pin, type: String
     end
     post :pay do
       vehicle= vehicle_exists? params[:vehicle_id]
 
       ticket= Ticket.find_by id: params[:ticket_id], paid: false
+
       error! "There is a ticket to be paid for the vehicle with id #{params[:vehicle_id]}", 500 unless ticket
+      error! "Pin #{params[:pin]} is incorrect", 500 if params[:pin] != @current_user.pin
 
       ticket.update paid: true, price: params[:price]
       ticket
