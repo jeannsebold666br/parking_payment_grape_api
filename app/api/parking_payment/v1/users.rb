@@ -13,7 +13,7 @@ class ParkingPayment::V1::Users < Grape::API
       requires :identifier, type: String, allow_blank: false, desc: 'Users identifier'
       requires :email, type: String, allow_blank: false, desc: 'Users email'
       optional :name, type: String, allow_blank: false, desc: 'User name'
-      requires :pin, type: String, length:4, allow_blank: false, desc: 'Pin for payments'
+      # requires :pin, type: String, length:4, allow_blank: false, desc: 'Pin for payments'
       requires :password, type: String, length:8, allow_blank: false, desc: 'User password'
     end
     post 'create' do
