@@ -20,4 +20,4 @@ For run the project, you should do:
 
 ## Contributors
 
-Thanks to Spotify for having presented with a good music to develop this API :p
+Thanks to Spotify for having presented with a good music to develop this API: p
