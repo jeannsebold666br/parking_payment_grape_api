@@ -13,6 +13,11 @@ For run the project, you should do:
 3. Create the tables with **rake:migrate**
 4. Instantiate the Rails server with **rails s**
 
+## Minimum requirements
+
+1. Ruby 2.2.1
+2. Postgresql 9.1
+
 ## Contributors
 
 Thanks to Spotify for having presented with a good music to develop this API :p
