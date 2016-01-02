@@ -2,7 +2,7 @@
 This project is a small example about how to develop API's with Grape (gem for Ruby).
 
 ## Extras
-It was implemented additional features that make from creating an API with grape, to automating the deployment with Capistrano.
+It was implemented additional features that make from creating an API with grape, to automating the deployment with Capistrano and dotenv for basic configuration
 
 ## Installation
 
